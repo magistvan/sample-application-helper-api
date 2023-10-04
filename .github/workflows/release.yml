@@ -33,9 +33,9 @@ jobs:
           git push
       - name: Create Git Tag
         run: |
+          export version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
           git config user.name release-bot
           git config user.email release-bot@email.com
-          export version=$(mvn help:evaluate -Dexpression="project.version" -q -DforceStdout')
           git tag -a $version -m "$version"
           git push origin $version
 

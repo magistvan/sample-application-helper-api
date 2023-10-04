@@ -10,7 +10,7 @@
 
     <groupId>io.github.magistvan</groupId>
     <artifactId>sample-application-helper-api</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Sample application helper API</name>

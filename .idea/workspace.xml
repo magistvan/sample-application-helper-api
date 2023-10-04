@@ -95,7 +95,31 @@
       <option name="project" value="LOCAL" />
       <updated>1696429929757</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix tagging">
+      <option name="closed" value="true" />
+      <created>1696430417825</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696430417825</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix publish">
+      <option name="closed" value="true" />
+      <created>1696430615667</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696430615667</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fix publish">
+      <option name="closed" value="true" />
+      <created>1696430713430</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696430713430</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +137,7 @@
     <MESSAGE value="Fix workspace" />
     <MESSAGE value="Fix release" />
     <MESSAGE value="Fix tagging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix tagging" />
+    <MESSAGE value="Fix publish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix publish" />
   </component>
 </project>

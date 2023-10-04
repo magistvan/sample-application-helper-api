@@ -1,4 +1,4 @@
-package magistvan.sampleapplicationhelper.api.resource;
+package io.github.magistvan.sampleapplicationhelper.api.resource;
 
 import org.springframework.web.bind.annotation.GetMapping;
 

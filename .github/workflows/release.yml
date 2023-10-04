@@ -25,7 +25,7 @@ jobs:
 
       - name: Increment Version
         run: |
-          ./mvnw build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion} versions:commit
+          mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion} versions:commit
           git config user.name my-bot-user
           git config user.email my-bot-user@email.com
           git add .
@@ -33,7 +33,7 @@ jobs:
           git push
       - name: Create Git Tag
         run: |
-          export version=$(./mvnw help:evaluate -Dexpression=project.version -q -DforceStdout')
+          export version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout')
           git config user.name my-bot-user
           git config user.email my-bot-user@email.com
           git tag -a $version -m "$version"

@@ -65,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696416867329</updated>
-      <workItem from="1696416868460" duration="7150000" />
+      <workItem from="1696416868460" duration="7491000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -115,7 +115,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696427249856</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Replace mnw with mvn">
+      <option name="closed" value="true" />
+      <created>1696427479159</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696427479159</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add maven setup">
+      <option name="closed" value="true" />
+      <created>1696427662097</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696427662097</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +144,8 @@
     <MESSAGE value="Move files to correct package" />
     <MESSAGE value="Add releasing to pom" />
     <MESSAGE value="Fix releasing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix releasing" />
+    <MESSAGE value="Replace mnw with mvn" />
+    <MESSAGE value="Add maven setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add maven setup" />
   </component>
 </project>

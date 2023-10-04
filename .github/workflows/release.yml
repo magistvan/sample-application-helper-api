@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v2.3.4
 
       - name: Setup Java
@@ -23,7 +23,7 @@ jobs:
         with:
           maven-version: 3.8.2
 
-      - name: Increment Version
+      - name: Increment version
         run: |
           mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion} versions:commit
           git config user.name release-bot
@@ -31,7 +31,7 @@ jobs:
           git add .
           git commit -m "updated version in pom.xml"
           git push
-      - name: Create Git Tag
+      - name: Create Git tag
         run: |
           export version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
           git config user.name release-bot

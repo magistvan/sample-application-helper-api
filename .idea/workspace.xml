@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ba77444-2d0d-490b-976e-64e8c722e4a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696416867329</updated>
-      <workItem from="1696416868460" duration="4603000" />
+      <workItem from="1696416868460" duration="6807000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -92,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696420393814</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add releasing to pom">
+      <option name="closed" value="true" />
+      <created>1696423853958</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696423853958</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +111,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add resource and invoker" />
     <MESSAGE value="Move files to correct package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move files to correct package" />
+    <MESSAGE value="Add releasing to pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add releasing to pom" />
   </component>
 </project>

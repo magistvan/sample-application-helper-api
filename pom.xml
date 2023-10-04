@@ -16,14 +16,15 @@
     <name>Sample application helper API</name>
     <url>https://github.com/magistvan/sample-application-helper-api</url>
     <scm>
+        <connection>scm:git:https://github.com/magistvan/sample-application-helper-api.git</connection>
         <url>https://github.com/magistvan/sample-application-helper-api.git</url>
+        <developerConnection>scm:git:https://github.com/magistvan/sample-application-helper-api.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
     <licenses>
         <license>
-            <name>sampleapplicationhelper-api</name>
-            <url>https://github.com/magistvan/sample-application-helper-api</url>
-            <distribution>repo</distribution>
-            <comments>API for sample application helper</comments>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
     <developers>
@@ -32,6 +33,16 @@
             <email>magistvan@yahoo.com</email>
         </developer>
     </developers>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

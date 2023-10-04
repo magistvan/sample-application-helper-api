@@ -26,16 +26,16 @@ jobs:
       - name: Increment Version
         run: |
           mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion} versions:commit
-          git config user.name my-bot-user
-          git config user.email my-bot-user@email.com
+          git config user.name bot
+          git config user.email magistvan@yahoo.com
           git add .
           git commit -m "updated version in pom.xml"
           git push
       - name: Create Git Tag
         run: |
           export version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout')
-          git config user.name my-bot-user
-          git config user.email my-bot-user@email.com
+          git config user.name bot
+          git config user.email magistvan@yahoo.com
           git tag -a $version -m "$version"
           git push origin $version
 

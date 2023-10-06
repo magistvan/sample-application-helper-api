@@ -1,33 +1,59 @@
-name: release # You may choose a different name
-run-name: Release run ${{ github.run_number }} # Enumerates entries in the "workflow runs" view
+name: release
+run-name: Release ${{ github.run_number }}
 on:
-  workflow_dispatch: # Only run when manually started
+  push:
+    branches:
+      - master
 jobs:
-  release: # Arbitrarily chosen
-    name: Release # Arbitrarily chosen
-    runs-on: ubuntu-22.04 # May also run on other kinds of distros
+  build:
+    name: Release
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Setup Java
-        uses: actions/setup-java@v3 # Does also set up Maven and GPG
+        uses: actions/setup-java@v3
         with:
-          distribution: 'temurin' # As good as any other, see: https://github.com/actions/setup-java#supported-distributions
+          distribution: 'temurin'
           java-package: 'jdk'
           java-version: '11'
           check-latest: true
-          server-id: 'ossrh' # must match the serverId configured for the nexus-staging-maven-plugin
-          server-username: OSSRH_USERNAME # Env var that holds your OSSRH user name
-          server-password: OSSRH_PASSWORD  # Env var that holds your OSSRH user pw
-          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }} # Substituted with the value stored in the referenced secret
-          gpg-passphrase: SIGN_KEY_PASS # Env var that holds the key's passphrase
-      - name: Build & Deploy
+          server-id: 'ossrh'
+          server-username: OSSRH_USERNAME
+          server-password: OSSRH_PASSWORD
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: SIGN_KEY_PASS
+
+      - name: Increment version
         run: |
-          # -U force updates just to make sure we are using latest dependencies
-          # -B Batch mode (do not ask for user input), just in case
-          # -P activate profile
-          mvn -U -B clean deploy -P release -P deploy
+          mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion} versions:commit
+          git config user.name release-bot
+          git config user.email release-bot@email.com
+          git add .
+          git commit -m "Prepare release"
+          git push
+
+      - name: Create Git tag
+        run: |
+          export version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          git config user.name release-bot
+          git config user.email release-bot@email.com
+          git tag -a $version -m "$version"
+          git push origin $version
+
+      - name: Build & Deploy
+        run: mvn -U -B clean deploy -P release -P deploy
         env:
           SIGN_KEY_PASS: ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+
+      - name: Set next SNAPSHOT version
+        run: |
+          mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.nextMinorVersion}-SNAPSHOT versions:commit
+          git config user.name release-bot
+          git config user.email release-bot@email.com
+          git add .
+          git commit -m "Set version to SNAPSHOT"
+          git push

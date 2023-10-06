@@ -122,9 +122,6 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <configuration>
-                            <passphrase>qwaszxedc1</passphrase>
-                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>

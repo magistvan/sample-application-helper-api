@@ -181,9 +181,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696589360453</updated>
-      <workItem from="1696589367709" duration="2502000" />
+      <workItem from="1696589367709" duration="3824000" />
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix release">
+      <option name="closed" value="true" />
+      <created>1696591882187</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696591882187</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,10 +210,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix workspace" />
-    <MESSAGE value="Fix release" />
     <MESSAGE value="Fix tagging" />
     <MESSAGE value="Fix publish" />
     <MESSAGE value="Retry publish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retry publish" />
+    <MESSAGE value="Fix release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix release" />
   </component>
 </project>

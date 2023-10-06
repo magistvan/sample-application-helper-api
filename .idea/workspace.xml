@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="399b0d0b-9c83-4b62-b0bd-4b9663d7ce1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +180,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696589360453</updated>
-      <workItem from="1696589367709" duration="8496000" />
+      <workItem from="1696589367709" duration="9207000" />
     </task>
     <task id="LOCAL-00012" summary="Fix release">
       <option name="closed" value="true" />
@@ -239,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696596668805</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Change to automatic release after every push">
+      <option name="closed" value="true" />
+      <created>1696598000391</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696598000391</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +269,7 @@
     <MESSAGE value="Fix publish" />
     <MESSAGE value="Retry publish" />
     <MESSAGE value="Fix release" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix release" />
+    <MESSAGE value="Change to automatic release after every push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change to automatic release after every push" />
   </component>
 </project>

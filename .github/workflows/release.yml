@@ -43,7 +43,7 @@ jobs:
           git push origin $version
 
       - name: Build & Deploy
-        run: mvn -U -B clean deploy -P release -P deploy
+        run: mvn -U -B clean deploy -P release
         env:
           SIGN_KEY_PASS: ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}

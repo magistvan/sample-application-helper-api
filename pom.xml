@@ -49,6 +49,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <spring.cloud.version>3.1.4</spring.cloud.version>
+
+        <maven.release.plugin.version>3.0.1</maven.release.plugin.version>
+        <maven.gpg.plugin.version>3.1.0</maven.gpg.plugin.version>
+        <nexus.staging.maven.plugin.version>1.6.13</nexus.staging.maven.plugin.version>
     </properties>
 
     <dependencies>
@@ -69,23 +73,7 @@
     <profiles>
         <profile>
             <id>release</id>
-            <properties>
-                <version.maven-release-plugin>3.0.1</version.maven-release-plugin>
-                <version.maven-gpg-plugin>3.1.0</version.maven-gpg-plugin>
-                <version.nexus-staging-maven-plugin>1.6.13</version.nexus-staging-maven-plugin>
-            </properties>
             <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <artifactId>maven-release-plugin</artifactId>
-                            <version>${version.maven-release-plugin}</version>
-                            <configuration>
-                                <tagNameFormat>@{project.version}</tagNameFormat>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -113,7 +101,7 @@
                     </plugin>
                     <plugin>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${version.maven-gpg-plugin}</version>
+                        <version>${maven.gpg.plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -135,12 +123,19 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>${version.nexus-staging-maven-plugin}</version>
+                        <version>${nexus.staging.maven.plugin.version}</version>
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>ossrh</serverId>
                             <nexusUrl>https://s01.oss.sonatype.org</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-release-plugin</artifactId>
+                        <version>${maven.release.plugin.version}</version>
+                        <configuration>
+                            <tagNameFormat>@{project.version}</tagNameFormat>
                         </configuration>
                     </plugin>
                 </plugins>

@@ -4,15 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="399b0d0b-9c83-4b62-b0bd-4b9663d7ce1c" name="Changes" comment="" />
+    <list default="true" id="399b0d0b-9c83-4b62-b0bd-4b9663d7ce1c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/magistvan/sampleapplicationhelper/api/invoker/SampleApplicationHelperInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/magistvan/sampleapplicationhelper/api/invoker/SampleApplicationHelperInvoker.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "magistvan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/magistvan/sample-application-helper-api.git",
+    "accountId": "ea9d0e47-f50d-43c9-ad77-5b98e75614b5"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -84,7 +105,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-25a4bffe" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -189,6 +211,7 @@
       <updated>1696589360453</updated>
       <workItem from="1696589367709" duration="9207000" />
       <workItem from="1711045927509" duration="68000" />
+      <workItem from="1714555529023" duration="2761000" />
     </task>
     <task id="LOCAL-00012" summary="Fix release">
       <option name="closed" value="true" />
@@ -254,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696598000391</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Change url for invoker">
+      <option name="closed" value="true" />
+      <created>1714555671936</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714555671936</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +309,7 @@
     <MESSAGE value="Retry publish" />
     <MESSAGE value="Fix release" />
     <MESSAGE value="Change to automatic release after every push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change to automatic release after every push" />
+    <MESSAGE value="Change url for invoker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change url for invoker" />
   </component>
 </project>
